@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAL STORE</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+header{
+width:100%;
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+url('photo_2026-05-16_13-34-32.jpg');
+background-size:auto;
+background-position:center;
+display:flex;
+flex-direction:column;
+}
+
+nav{
+width:100%;
+padding:22px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+top:0;
+left:0;
+z-index:1000;
+background:rgba(0,0,0,0.45);
+backdrop-filter:blur(12px);
+}
+
+.logo{
+font-size:35px;
+font-weight:800;
+letter-spacing:2px;
+}
+
+.logo span{
+color:#00bfff;
+}
+
+nav ul{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:17px;
+transition:0.4s;
+}
+
+nav ul li a:hover{
+color:#00bfff;
+}
+
+.hero{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:90px;
+line-height:100px;
+font-weight:800;
+text-shadow:0 0 30px rgba(0,0,0,0.8);
+}
+
+.hero span{
+color:#00bfff;
+}
+
+.hero p{
+margin-top:25px;
+font-size:20px;
+color:#ddd;
+max-width:750px;
+line-height:35px;
+}
+
+.hero button{
+margin-top:40px;
+padding:18px 55px;
+border:none;
+border-radius:50px;
+background:#00bfff;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:0.4s;
+font-weight:600;
+}
+
+.hero button:hover{
+transform:scale(1.1);
+box-shadow:0 0 35px #00bfff;
+background:#0099dd;
+}
+
+.products{
+padding:110px 8%;
+}
+
+.title{
+text-align:center;
+margin-bottom:70px;
+}
+
+.title h2{
+font-size:60px;
+font-weight:800;
+}
+
+.title p{
+margin-top:15px;
+color:#999;
+font-size:18px;
+}
+
+.card-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
+}
+
+.card{
+background:#111;
+padding:30px;
+border-radius:30px;
+text-align:center;
+transition:0.5s;
+overflow:hidden;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover{
+transform:translateY(-15px);
+box-shadow:0 0 45px rgba(0,191,255,0.35);
+}
+
+.card img{
+width:100%;
+height:280px;
+object-fit:contain;
+transition:0.5s;
+}
+
+.card:hover img{
+transform:scale(1.08);
+}
+
+.card h3{
+margin-top:20px;
+font-size:28px;
+font-weight:700;
+}
+
+.card p{
+margin-top:10px;
+color:#aaa;
+line-height:28px;
+font-size:15px;
+}
+
+.price{
+margin-top:15px;
+font-size:28px;
+font-weight:700;
+color:#00bfff;
+}
+
+.buy{
+margin-top:20px;
+padding:14px 35px;
+border:none;
+border-radius:40px;
+background:#00bfff;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.4s;
+font-weight:600;
+}
+
+.buy:hover{
+background:#0099dd;
+transform:scale(1.08);
+}
+
+.banner{
+padding:120px 8%;
+text-align:center;
+background:linear-gradient(to right,#0a0a0a,#111,#0a0a0a);
+}
+
+.banner h1{
+font-size:65px;
+}
+
+.banner p{
+margin-top:20px;
+font-size:20px;
+color:#bbb;
+}
+
+footer{
+padding:35px;
+text-align:center;
+background:black;
+color:#777;
+font-size:15px;
+}
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:55px;
+line-height:65px;
+}
+
+nav ul{
+gap:18px;
+}
+
+.banner h1{
+font-size:42px;
+}
+
+}
+
+@media(max-width:700px){
+
+nav ul{
+display:none;
+}
+
+.hero h1{
+font-size:42px;
+line-height:52px;
+}
+
+.hero p{
+font-size:16px;
+line-height:30px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+SAL<span>STORE<span>
+    សាល<span>ស្តរ</span>
+</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</nav>
+
+<div class="hero">
+
+<h1>SAl STORE<br><span></span></h1>
+
+<p>
+ហាងលក់ផ្ដាច់មុខទូរស័ព្ទ IPHONE នៅប្រទេសកម្ពុជា
+គុណភាពទំនុកចិត្តនិងមានធានាត្រឹមត្រូវចេញពីក្រុមហ៊ុនAppleនិងហាងយេីងផ្ទាល់។
+IPhone specialty store in Cambodia,
+ with trusted quality and proper warranty directly from the company and our store.
+</p>
+
+<button onclick="document.getElementById('products').scrollIntoView();">
+Shop Now
+</button>
+
+</div>
+
+</header>
+
+<section class="products" id="products">
+
+<div class="title">
+<h2>Apple iPhone Collection</h2>
+<p>Choose your favorite Apple iPhone</p>
+<p>ជ្រើសរើសប្រភេទដែលលោកអ្នកពេញចិត្ត</p>
+
+</div>
+
+<div class="card-box">
+
+<div class="card">
+<img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-7-1.jpg">
+<h3>iPhone 7</h3>
+<p>Classic Apple design with smooth performance.</p>
+<p>រចនាប័ទ្ម Apple ថ្មីជាមួយនឹងការអនុវត្តដែលរលូន។</p>
+<div class="price">១១៨៩០០៛</div>
+<div class="price">$29</div>
+<a href="https://t.me/ceosalsmos" target="_blank">
+<button class="buy">Buy Now</button>
+</a>
+</div>
+
+<div class="card">
+<img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-8-new-1.jpg">
+<h3>iPhone 8</h3>
+<p>Elegant glass body with wireless charging.</p>
+<p>ខ្លាំងខ្លះនៃរាងកែវលំអស្រស់ស្អាតជាមួយការចម្លងថ្មឥតខ្សែរ។</p>
+<div class="price">១៥៩៩០០៛</div>
+<div class="price">$39</div>
+<a href="https://t.me/ceosalsmos" target="_blank">
+<button class="buy">Buy Now</button>
+</a>
+</div>
+
+<div class="card">
+<img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-x-new-1.jpg">
+<h3>iPhone X</h3>
+<p>Beautiful OLED display and Face ID.</p>
+<p>អេក្រង់ OLED ស្អាត និង Face ID។</p>
+<div class="price">២៤១៩០០៛</div>
+<div class="price">$59</div>
+<a href="https://t.me/ceosalsmos" target="_blank">
+<button class="buy">Buy Now</button>
+</a>
+</div>
+
+<div class="card">
+<img src="https://i5.walmartimages.com/asr/6496e7da-0064-483d-95be-3551ca0e237b_1.53d587e0246c55d5a1e0c5cf3ae7afe3.jpeg?odnWidth=1000&odnHeight=1000&odnBg=ffffff">
+<h3>iPhone XR</h3>
+<p>Colorful design with amazing battery life.</p>
+<p>ការរចនាមានពណ៌ចម្រុះជាមួយអាយុកាលថ្មអស្ចារ្យ។</p>
+<div class="price">៤០៥៩០០៛</div>
+<div class="price">$99</div>
+<a href="https://t.me/ceosalsmos" target="_blank">
+<button class="buy">Buy Now</button>
+</a>
+</div>
+
+<div class="card">
+<img src="https://th.bing.com/th/id/R.9f7832114a8039cd77d0b8adac4bee21?rik=p5LhwzX9ju18Lw&pid=ImgRaw&r=0">
+<h3>iPhone 11</h3>
+<p>Fast performance and powerful cameras.</p>
+<p>ប្រតិបត្តិការ​រហ័ស និងកាមេរ៉ាដ៏មានអំណាច។</p>
+<div class="price">៨១៥៩០០៛</div>
+<div class="price">$199</div>
+<a href="https://t.me/ceosalsmos" target="_blank">
+<button class="buy">Buy Now</button>
+</a>
+</div>
+
+<div class="card">
+<img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6009/6009679_sd.jpg">
+<h3>iPhone 12</h3>
+<p>Modern flat-edge design with 5G speed.</p>
+<p>ការរចនាវិចិត្រសិល្ប៍កំរាស់ស្រួលសម្គាល់ទំនើបជាមួយល្បឿន 5G។</p>
+<div class="price">១០២០៩០០៛</div>
+<div class="price">$249</div>
+<a href="https://t.me/ceosalsmos" target="_blank">
+<button class="buy">Buy Now</button>
+</a>
+</div>
+
+<div class="card">
+<img src="https://th.bing.com/th/id/OIP.nvdM5sEm4DqG8oZb8nNStQHaHa?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3">
+<h3>iPhone 13</h3>
+<p>Advanced camera system and super fast chip.</p>
+<p>ប្រព័ន្ធកាមេរ៉ាដែលលំអិតខ្ពស់ និងចំរេះខ្យល់លឿនស្រួល។</p>
+<div class="price">១២២៥៩០០៛</div>
+<div class="price">$299</div>
+<a href="https://t.me/ceosalsmos" target="_blank">
+<button class="buy">Buy Now</button>
+</a>
+</div>
+
+<div class="card">
+<img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14.jpg">
+<h3>iPhone 14</h3>
+<p>Elegant design with excellent battery life.</p>
+<p>រចនាបថប្រណីតជាមួយអាយុកាលថ្មល្អឥតខ្ចោះ។</p>
+<div class="price">១៤៧១៩០០៛</div>
+<div class="price">$359</div>
+<a href="https://t.me/ceosalsmos" target="_blank">
+<button class="buy">Buy Now</button>
+</a>
+</div>
+
+<div class="card">
+<img src="data:image/webp;base64,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">
+<h3>iPhone 15 Pro Max</h3>
+<p>Titanium body with premium performance.</p>
+<p>ខ្លួនដែក​តៃតាប្យូម​ជាមួយ​ប្រសិទ្ធភាព​ពិសេស។</p>
+<div class="price">២៤៥៥៩០០៛</div>
+<div class="price">$599</div>
+<a href="https://t.me/ceosalsmos" target="_blank">
+<button class="buy">Buy Now</button>
+</a>
+</div>
+
+<div class="card">
+<img src="data:image/webp;base64,UklGRjoHAABXRUJQVlA4IC4HAABQKACdASqbALQAPp1Inkylo6arI5FLqWATiWcA1SX4i47gDnkbJtl0vHXae58u3uYvwU01v7X6D/9o9GbPb9ZewN+ufVz/bj2Mf1pLmDE+OmnGT+84iIISEoIDkojJOp66EZg7UCSWQDB230sMSPyyAaDVvxE7PBHrDb4ijQ/5luP9fY6xsrC2VktwhcRHYGCkqQDOgQwKDKn2xyiYYE8SUAokx1wGOqz8pb9I7VfhsW94ngF/yYQPVhVGnQhm+/zG9ZpZuyNXX7+uLZ482r+g709VDCB9djS3PyOQXC5BJrQqxrdNU7uWXTwpB+vjWr7a5SxPz3BmE6Q4ZQXpoaOn2tJ6v22GfjO9tDt4NnfkPvpo5ZFu4Pz1W5sHHn/47LDTTgyXLxyB/WNn+UT7M0UG7o6R33nPy5iYfNoN5euDbPp/1qiWe6EkyDwgAP76XgAAEJHk5YFerOmiDfu8bqt+VauxWO2yC+24b/gJZRybtg5w6G3In98txu/115P2/zNzdFMWh1YTZLaelJ4Ggv2HJyXnXKUBiTro3eE3/YA/YqgZflKwLz5wChJzuWNj7Mh/j/8NIFZfEznkntnch2vn7pm2wg7Lh+b6Hp/ZYPule0oQ7NZ48peKHmR4S4rRL7tn6b7JusjqPxvNZ48DCSjxcMLNKX5OqvKYblf3DiFToXQzomZ3nEC6E0sSLn1XEnS1AGktA4Uts07xGMfO4BWTPPh1Hmvku8TDzKCUoRwcWgOF1rzOAQMKaM75ffkVYFT05A35HXBz3Kv6Xa+nu3Cmt/ME6ap/mJ4AweAM8DpXerTI5ZIkKdLzbyP7Nwp/kDlVwI73brROlfCxjRIioC4AXqVJ6Zb8w5AZ/thYJVAYvIK/Lg9v8Z0nOApfgdJXzPbinIq/+PABpXagJj3tvo6TIhuJgZrVFZJBGDJs1PzQfO+1vyOAl529dlXPf0rTB4W1GDrMqn+z6XkmupJHL0XDc4AasDg+UkkcmWSXJpPznBWgonlbnkrPMp2PLwwBGAh8r4RC8UV8gXCajCKA6y0FtrdCXWObbIJerkNoyx/GqlZtKB7C9z3v4TTm28Mj51cfRANgcnmqSid6rHzaqaEpnZYdvTPbmzRmFdAHmFDRWRxF5ufdG01nGVqeZiepnsssn7laYj26TpohjbPxXJf0/GuSTflOgkCVIoJ1IS1svRFn+3vBxTtDrChGJ0VemqK9BjyqEGlXGrBiSHn/v6wjyWgbjna58G0lKz1GTn/33ZnMG8JH4yxRwpQsIvb4r0JkPbVtah8t1+R3GDh87+z1X1QmLRL8DRZ/DdC9FOumSO5GDVvFe2PNP+uJFcm7id7LemjaZsugJ8J8g8I5PmDUxJezVPVjbYX16/D1lqSfFqCXhetq9pq9lRoKe25iLK3byvxsrUPf18DmXiH9m6SF79j5Oh1sCJ0+3LAVup9YPVt35WNWikQDqxQn6lQyC+iATZ/Mv4gkZmzZEzs72yOT2oxuVnVO5ejkjHTpym1hbDVVDW8Y0mkqbrNZeqcsNamCMcq1EABzGITlhdfe8HUiqLhFplq+cqR6RAPeQ2/+dYEyW1A3MzoHfc6dx46NbPlDjKZjTNTWmyNPIQ8iAWRuJAgi7Xlb95JaVC6zwzqUZ2xpMgKa3ceqN49+pUTPM6ZirvTKagZsXdwtspZw4rP6RQJTaTcMuhP0H2RPo8eiaugd54x11nkTaephg970tgNUXm4p+Q+bn7TIxK/TJ0TY16hesh/k74g3uAy3KjC2ePmSRHYbb0CBrPnULhCfaLb2F3mseBkMiuqz4z2UGCP4Wwoc2VSg4IhEn2c441W1r0pJOCjKWAtkf7G5qhuTISPtdgW89KSwj/TIuBFkYpRu0ZM2QI5EYNxQhTWt5dqF0PP53o3fVCR91KXY4i2nd5GjCyaS5GeYQE5bkckGHq9dtjAETHAHaqgPL5nAY/f/NuUXLBsXYXPxecW9pXZUAbnQMxAxcNyUkWOlzyHOf2oHYhP+H9p2x3FKZeuNGka5HMmyQCyFpCDhPOdBhWoJIlNJEr+/+T7Gt1waNUFbYnvB1+Kkzb8RImAG7VFW9faGoP2us3deTCaxvWZYwn45fG2/IZcv0t4NzaSpViP3Uh/6YHAdxAm0dRehpe/9Ts9KOIySnJ0Ent+NygPzomeBhAZUQFP/PXiJYZp+yg5C55ykxcLMKJNDWygLtaTpH20sjXLESdGQf6lR/ayGYUUKrg6u0a7P9zmQNxcLjlSONuUsJPxQ1evUYVArfA7Vt02YoOGFI9bfVMEXTH0Zux6rr5+ZIKyo4CiU4PDFFNIFussZp2iZWSjc7pT7kthBHWmoopKhW/od/EpcIzyCaxngrYUHH0RrcQyTn9J6EHNgSZS3MQSij+fooi6XLby+vjN7JXFclAV+zVEzSSXa9YjCQ5Ua27rfwAAH/QAAAAAAAA==">
+<h3>iPhone 16 Pro Max</h3>
+<p>Luxury design with ultra powerful chip.</p>
+<p>ការរចនាថ្លៃថ្នូរជាមួយចិញ្ចៀនឆាប់ខ្លាំងខ្ពស់។</p>
+<div class="price">៣២៧៥៩០០៛</div>
+<div class="price">$799</div>
+<a href="https://t.me/ceosalsmos" target="_blank">
+<button class="buy">Buy Now</button>
+</a>
+</div>
+
+<div class="card">
+<img src="https://th.bing.com/th/id/OIP.2IH1a4tHCFqHO20QFbkHOgHaHa?w=154&h=180&c=7&r=0&o=7&pid=1.7&rm=3">
+<h3>iPhone 17 Pro Max</h3>
+<p>Future Apple technology with AI features.</p>
+<p>បច្ចេកវិទ្យា Apple អនាគតដែលមានលក្ខណៈពិសេស AI។ </p>
+<div class="price">៥៧៣៥៩០០៛</div>
+<div class="price">$1399</div>
+<a href="https://t.me/ceosalsmos" target="_blank">
+<button class="buy">Buy Now</button>
+</a>
+</div>
+
+</div>
+
+</section>
+
+<section class="banner">
+
+<h1>Why Choose Apple?</h1>
+<h1>ហេតុអ្វីជ្រើសរើស Apple?</h1>
+
+<p>
+Luxury design, premium iOS,
+ALL IN THIS PHONE.
+</p>
+<p>ការរចនាអាថ៌កំបាំង, iOS មានតម្លៃប្រណិត, ទាំងអស់នៅក្នុងទូរស័ព្ទនេះ។</p>
+
+</section>
+
+<footer>
+
+© 2026 SAL STORE. All Rights Reserved.
+
+</footer>
+
+</body>
+</html>
